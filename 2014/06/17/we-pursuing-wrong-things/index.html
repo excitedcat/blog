@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="做自己喜欢做的事，做自己擅长的事！–巴菲特  从1991年21岁的Linus Torvalds释放第一个Linux版本开始，到现在已经经历了20多年了。从最开始成千上万狂热分子不计得为TA增补、修改、宣扬自由主义精神，到现在名目众多Linux发行版应用于金融、交通、通信、IT等各个核心领域，Linux早已成为颠覆世界的软件，并在以其稳定、高效、安全、免费等特性持续影响着全世界。">
+<meta name="keywords" content="linux,windows">
+<meta property="og:type" content="article">
+<meta property="og:title" content="原来我们一直在追求错误的东西 | Linux篇">
+<meta property="og:url" content="http://www.ijustplay.cn/2014/06/17/we-pursuing-wrong-things/index.html">
+<meta property="og:site_name" content="ExcitedCat">
+<meta property="og:description" content="做自己喜欢做的事，做自己擅长的事！–巴菲特  从1991年21岁的Linus Torvalds释放第一个Linux版本开始，到现在已经经历了20多年了。从最开始成千上万狂热分子不计得为TA增补、修改、宣扬自由主义精神，到现在名目众多Linux发行版应用于金融、交通、通信、IT等各个核心领域，Linux早已成为颠覆世界的软件，并在以其稳定、高效、安全、免费等特性持续影响着全世界。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-01-14T10:43:40.556Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="原来我们一直在追求错误的东西 | Linux篇">
+<meta name="twitter:description" content="做自己喜欢做的事，做自己擅长的事！–巴菲特  从1991年21岁的Linus Torvalds释放第一个Linux版本开始，到现在已经经历了20多年了。从最开始成千上万狂热分子不计得为TA增补、修改、宣扬自由主义精神，到现在名目众多Linux发行版应用于金融、交通、通信、IT等各个核心领域，Linux早已成为颠覆世界的软件，并在以其稳定、高效、安全、免费等特性持续影响着全世界。">
+<meta name="twitter:creator" content="@kangfenmao">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>原来我们一直在追求错误的东西 | Linux篇</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+      <link rel="alternate" href="/atom.xml" title="ExcitedCat" type="application/atom+xml" />
+    
+</head>
+
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/search/">Search</a></li>
+         
+          <li><a href="https://github.com/excitedcat">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2014/07/25/pyramid-principles/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="/2014/06/12/what-are-we-doing-when-learnning/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://www.ijustplay.cn/2014/06/17/we-pursuing-wrong-things/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://www.ijustplay.cn/2014/06/17/we-pursuing-wrong-things/&text=原来我们一直在追求错误的东西 | Linux篇"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://www.ijustplay.cn/2014/06/17/we-pursuing-wrong-things/&title=原来我们一直在追求错误的东西 | Linux篇"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://www.ijustplay.cn/2014/06/17/we-pursuing-wrong-things/&is_video=false&description=原来我们一直在追求错误的东西 | Linux篇"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=原来我们一直在追求错误的东西 | Linux篇&body=Check out this article: http://www.ijustplay.cn/2014/06/17/we-pursuing-wrong-things/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://www.ijustplay.cn/2014/06/17/we-pursuing-wrong-things/&title=原来我们一直在追求错误的东西 | Linux篇"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://www.ijustplay.cn/2014/06/17/we-pursuing-wrong-things/&title=原来我们一直在追求错误的东西 | Linux篇"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://www.ijustplay.cn/2014/06/17/we-pursuing-wrong-things/&title=原来我们一直在追求错误的东西 | Linux篇"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://www.ijustplay.cn/2014/06/17/we-pursuing-wrong-things/&title=原来我们一直在追求错误的东西 | Linux篇"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://www.ijustplay.cn/2014/06/17/we-pursuing-wrong-things/&name=原来我们一直在追求错误的东西 | Linux篇&description=&lt;blockquote&gt;
+&lt;p&gt;做自己喜欢做的事，做自己擅长的事！–巴菲特&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;从1991年21岁的Linus Torvalds释放第一个Linux版本开始，到现在已经经历了20多年了。从最开始成千上万狂热分子不计得为TA增补、修改、宣扬自由主义精神，到现在名目众多Linux发行版应用于金融、交通、通信、IT等各个核心领域，Linux早已成为颠覆世界的软件，并在以其稳定、高效、安全、免费等特性持续影响着全世界。&lt;/p&gt;"><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#CUI-amp-GUI"><span class="toc-number">1.</span> <span class="toc-text">CUI &amp; GUI</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Windows-amp-Linux-应用领域"><span class="toc-number">2.</span> <span class="toc-text">Windows &amp; Linux 应用领域</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#如何选择操作系统"><span class="toc-number">3.</span> <span class="toc-text">如何选择操作系统</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        原来我们一直在追求错误的东西 | Linux篇
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">ExcitedCat</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2014-06-17T10:18:46.000Z" itemprop="datePublished">2014-06-17</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/linux-windows/">linux,windows</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <blockquote>
+<p>做自己喜欢做的事，做自己擅长的事！–巴菲特</p>
+</blockquote>
+<p>从1991年21岁的Linus Torvalds释放第一个Linux版本开始，到现在已经经历了20多年了。从最开始成千上万狂热分子不计得为TA增补、修改、宣扬自由主义精神，到现在名目众多Linux发行版应用于金融、交通、通信、IT等各个核心领域，Linux早已成为颠覆世界的软件，并在以其稳定、高效、安全、免费等特性持续影响着全世界。</p>
+<a id="more"></a>
+<p>我从初中（2008年）开始接触并认识Linux，当时听对面网吧老板说Linux是非常了不起的操作系统，能将磁盘性能发挥到极致。那时候我就问他：你们网吧为什么不安装Linux操作系统呢？</p>
+<p>当然这看起来有点像笑话了，不过Linux这个神秘的系统我已经深深记住了。最早开始接触的Linux发行版就是Ubuntu 10.04 LTS了，从那时起我就开始尝试接触各式各样的Linux发行版。当时热衷于将Linux安装到U盘里，随时随地用自己的操作系统查看自己的文档。</p>
+<h1 id="CUI-amp-GUI"><a href="#CUI-amp-GUI" class="headerlink" title="CUI &amp; GUI"></a>CUI &amp; GUI</h1><p>近年来，随着对计算机领域知识的深入了解。系统学习了一些计算机课程之后开始对OS有了一些系统的理解：</p>
+<p>操作系统按照用户界面来分则主要有图形界面和命令行界面，这两种界面没有优劣之分，他们被设计用于不同的领域：</p>
+<p>我们熟悉的Window系统采用的界面为GUI(Graphical User Interface)即图形用户界面。我们一打开机器就可以看到有好的图形界面如窗口、按钮、菜单。我们可以方便使用图形化工具去工作，如用PS处理图片、用FoxMail收发邮件、用Chrome浏览器浏览网页。</p>
+<p>Linux系统采用的是CUI (Command line User Interface )即命令行用户接口，通过输入命令来管理操作系统。虽然CUI操作方式并没有GUI简单。但是熟练使用可以完成很多GUI无法完成的工作。目前Linux在商业领域大放异彩，其作为服务器操作系统占有市场份额的90%。如今的HTTP Server，Mail Server等多运行Linux操作系统，通常这些服务器只提供服务给消费者，不需要安装图形界面程序。</p>
+<h1 id="Windows-amp-Linux-应用领域"><a href="#Windows-amp-Linux-应用领域" class="headerlink" title="Windows &amp; Linux 应用领域"></a>Windows &amp; Linux 应用领域</h1><p>从Windows3.0开始到WindowsXP 在到如今的Window7&amp;8，Windows早已用其简单傻瓜的操作方式，易用的图形界面、丰富的应用程序、以及其良好的兼容性颠覆整个世界。现在我们用其消费或创作内容。</p>
+<p>Linux最初被设计成为CUI的操作界面，融合了Unix的众多优点，成为极客必备的操作系统。Linux的学习成本很高，TA默认是不提供图形界面给用户使用。这意味着操作系统运行起来后我们面对的就是CUI，也就是命令行。这对普通用户并不友好，而且需要很高的学习成本。同时也不能带给我们好的视听体验。虽然现在有开源的桌面程序加入（Gnome，Xface，KDE），但是缺乏核心应用。</p>
+<p>Linux在图形界面的路上走的十分艰难，始终维持着较低的市场占有率，虽然国家在努力号召使用国产Linux操作系统，但是并没有给市场份额带来太大影响。但是Linux凭借其安全、稳定、高效、资源占用小等众多优点，在服务器领域一枝独秀。现在我们用其给用户提供稳定的服务。</p>
+<h1 id="如何选择操作系统"><a href="#如何选择操作系统" class="headerlink" title="如何选择操作系统"></a>如何选择操作系统</h1><p>对于一个普通的消费内容的用户，选择Windows或MacOS操作系统将会让自己少很多麻烦同时拥有好的体验。如果你需要的是好用的界面、简单的操作那么不要再为选择Linux发行版而劳神费力了。好好用Window或MacOS吧，Linux系统给你提供不了很多好用的程序，更不要提众多的游戏支持了。这也是我折腾操作系统近6年后的经验之谈。</p>
+<p>而作为生产着，我们就要选择Linux这样的操作系统，用其稳定出色的性能，源源不断提供服务，供消费者使用。如果你要搭建服务器，最好远离Windows。选择一款稳定且安全的Linux。RedHat，CentOS才是你最好选择。</p>
+<blockquote>
+<p>选择正确的工具做正确的事情，而不是选择错误的东西做正确的事。有时候之所以痛苦，那是因为我们在追求错误的东西。</p>
+</blockquote>
+
+  </div>
+</article>
+
+    <div class="blog-post-comments">
+        <div id="disqus_thread">
+            <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+    </div>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/search/">Search</a></li>
+         
+          <li><a href="https://github.com/excitedcat">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#CUI-amp-GUI"><span class="toc-number">1.</span> <span class="toc-text">CUI &amp; GUI</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Windows-amp-Linux-应用领域"><span class="toc-number">2.</span> <span class="toc-text">Windows &amp; Linux 应用领域</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#如何选择操作系统"><span class="toc-number">3.</span> <span class="toc-text">如何选择操作系统</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://www.ijustplay.cn/2014/06/17/we-pursuing-wrong-things/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://www.ijustplay.cn/2014/06/17/we-pursuing-wrong-things/&text=原来我们一直在追求错误的东西 | Linux篇"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://www.ijustplay.cn/2014/06/17/we-pursuing-wrong-things/&title=原来我们一直在追求错误的东西 | Linux篇"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://www.ijustplay.cn/2014/06/17/we-pursuing-wrong-things/&is_video=false&description=原来我们一直在追求错误的东西 | Linux篇"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=原来我们一直在追求错误的东西 | Linux篇&body=Check out this article: http://www.ijustplay.cn/2014/06/17/we-pursuing-wrong-things/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://www.ijustplay.cn/2014/06/17/we-pursuing-wrong-things/&title=原来我们一直在追求错误的东西 | Linux篇"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://www.ijustplay.cn/2014/06/17/we-pursuing-wrong-things/&title=原来我们一直在追求错误的东西 | Linux篇"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://www.ijustplay.cn/2014/06/17/we-pursuing-wrong-things/&title=原来我们一直在追求错误的东西 | Linux篇"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://www.ijustplay.cn/2014/06/17/we-pursuing-wrong-things/&title=原来我们一直在追求错误的东西 | Linux篇"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://www.ijustplay.cn/2014/06/17/we-pursuing-wrong-things/&name=原来我们一直在追求错误的东西 | Linux篇&description=&lt;blockquote&gt;
+&lt;p&gt;做自己喜欢做的事，做自己擅长的事！–巴菲特&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;从1991年21岁的Linus Torvalds释放第一个Linux版本开始，到现在已经经历了20多年了。从最开始成千上万狂热分子不计得为TA增补、修改、宣扬自由主义精神，到现在名目众多Linux发行版应用于金融、交通、通信、IT等各个核心领域，Linux早已成为颠覆世界的软件，并在以其稳定、高效、安全、免费等特性持续影响着全世界。&lt;/p&gt;"><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2018 kangfenmao
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/search/">Search</a></li>
+         
+          <li><a href="https://github.com/excitedcat">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+<link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-86660611-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+    <script type="text/javascript">
+        var disqus_shortname = 'excitedcat';
+
+        (function(){
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        }());
+    </script>
+
+
